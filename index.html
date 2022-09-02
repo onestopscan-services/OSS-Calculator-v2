@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="user-scalable=no">
+  <title>One Stop Scan Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+
+</head>
+
+<body>
+
+  <div id="client_div" class="calc-screen">
+    <input id="client_info" type="text" placeholder="Client">
+  </div>
+
+  <div id="calc_div" class="grid-container">
+
+    <!-- 33 inch File Drawer -->
+    <div class="grid-item">
+      <div id="FD33">
+        <img class="card_content" src="newImages/FD33.png" alt="33 inch File Drawer">
+        <figcaption class="img-captions">33 Inch File Drawer</figcaption>
+      </div>
+
+      <div>
+        <button id="FD33_dec" class="increment-btns">-</button>
+        <input id="FD33value" type="number">
+        <button id="FD33_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- 24 inch File Drawer -->
+    <div class="grid-item">
+      <div id="FD24">
+        <img class="card_content" src="newImages/FD24.png" alt="24 inch File Drawer">
+        <figcaption class="img-captions">24 Inch File Drawer</figcaption>
+
+      </div>
+      <div>
+        <button id="FD24_dec" class="increment-btns">-</button>
+        <input id="FD24value" type="number">
+        <button id="FD24_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- Doc Archive Box -->
+    <div class="grid-item">
+      <div id="DAB">
+        <img class="card_content" src="newImages/DAB.png" alt="Document Archive Box">
+        <figcaption class="img-captions">Document Archive Box</figcaption>
+      </div>
+
+      <div>
+        <button id="DAB_dec" class="increment-btns">-</button>
+        <input id="DABvalue" type="number">
+        <button id="DAB_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- Large Doc Archive Box -->
+    <div class="grid-item">
+      <div id="LDAB">
+        <img class="card_content" src="newImages/LDAB.png" alt="Large Document Archive Box">
+        <figcaption class="img-captions">Large Document Archive Box</figcaption>
+      </div>
+
+      <div>
+        <button id="LDAB_dec" class="increment-btns">-</button>
+        <input id="LDABvalue" type="number">
+        <button id="LDAB_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- 36 inch Open Shelves -->
+    <div class="grid-item">
+      <div id="OS36">
+        <img class="card_content" src="newImages/OS36.png" alt="36 inch Open Shelf">
+        <figcaption class="img-captions">36 inch Open Shelf</figcaption>
+      </div>
+
+      <div>
+        <button id="OS36_dec" class="increment-btns">-</button>
+        <input id="OS36value" type="number">
+        <button id="OS36_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- Large Format Docs-->
+    <div class="grid-item">
+      <div id="LFD">
+        <img class="card_content" src="newImages/LFD.png" alt="Large Format Docs">
+        <figcaption class="img-captions">Large Format Docs</figcaption>
+      </div>
+
+      <div>
+        <button id="LFD_dec" class="increment-btns">-</button>
+        <input id="LFDvalue" type="number">
+        <button id="LFD_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- 24 inch Books-->
+    <div class="grid-item">
+      <div id="B24">
+        <img class="card_content" src="newImages/Books.png" alt="24 inch Books">
+        <figcaption class="img-captions">24 inch Books</figcaption>
+      </div>
+
+      <div>
+        <button id="B24_dec" class="increment-btns">-</button>
+        <input id="B24value" type="number">
+        <button id="B24_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+    <!-- Magazines -->
+    <div class="grid-item">
+      <div id="Mag">
+        <img class="card_content" src="newImages/magazines.png" alt="Magazines">
+        <figcaption class="img-captions">Magazines</figcaption>
+      </div>
+
+      <div>
+        <button id="MAG_dec" class="increment-btns">-</button>
+        <input id="MAGvalue" type="number">
+        <button id="MAG_inc" class="increment-btns">+</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- </div> -->
+
+  <div id="calcButtonDiv" class="calc-screen">
+    <button id="calculateButton">CALCULATE</button>
+    <button id="clearButton">CLEAR</button>
+  </div>
+
+
+  <div id="result_screen">
+    <!-- <div id="client_summ_div"> -->
+    <table>
+      <tr>
+        <th id="client_summ"></th>
+        <th>Quantity</th>
+        <th>Cost</th>
+      </tr>
+      <tr>
+        <td>33 inch File Drawer</td>
+        <td id="sumFD33"></td>
+        <td id="FD33cost"></td>
+      </tr>
+      <tr>
+        <td>24 inch File Drawer</td>
+        <td id="sumFD24"></td>
+        <td id="FD24cost"></td>
+      </tr>
+      <tr>
+        <td>Document Archive Box</td>
+        <td id="sumDAB"></td>
+        <td id="DABcost"></td>
+      </tr>
+      <tr>
+        <td>Large Document Archive Box</td>
+        <td id="sumLDAB"></td>
+        <td id="LDABcost"></td>
+      </tr>
+      <tr>
+        <td>36 inch Open Shelf</td>
+        <td id="sumOS36"></td>
+        <td id="OS36cost"></td>
+      </tr>
+      <tr>
+        <td>Large Format Document</td>
+        <td id="sumLFD"></td>
+        <td id="LFDcost"></td>
+      </tr>
+      <tr>
+        <td>24 inch Book</td>
+        <td id="sumB24"></td>
+        <td id="B24cost"></td>
+      </tr>
+      <tr>
+        <td>Magazine</td>
+        <td id="sumMAG"></td>
+        <td id="MAGcost"></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold;">TOTAL</td>
+        <td id="estTime" style="font-weight: bold;"></td>
+        <td id="totalCost"></td>
+      </tr>
+    </table>
+    <!-- </div> -->
+
+    <button id="backBtn" onclick="display_calculator()">BACK</button>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  </script>
+</body>
+
+</html>
